@@ -1,11 +1,11 @@
-<div class="characters-list-container">
+<div class="character-card-container">
     <mat-card *ngFor="let item of charactersList" class="card">
         <mat-card-header>
           <div mat-card-avatar class="avatar" [style.background-image] = "'url('+ item.avatarSrc+')'"></div>
           <mat-card-title>{{item.name}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p *ngIf="item.description; else noDescription">{{item.description}} </p>
+          <p *ngIf="!!item.description; else noDescription">{{item.description}}</p>
           <ng-template #noDescription>
             <p>No description</p>
           </ng-template>

@@ -4,3 +4,23 @@ body{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media  (min-width: 1000px) { 
+    .character-card-container{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.avatar{
+    background-size: cover;
+}
+
+.card{
+    margin-bottom: 5px;
+}
+
+.characterLink{
+    text-decoration: none;
+    color: inherit;
+}

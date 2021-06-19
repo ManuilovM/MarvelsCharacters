@@ -1,1 +1,40 @@
-<p>character works!</p>
+<div class="character-card-container character-card-container__characterComponent">
+    <h3>{{character.name}}</h3>
+    <img [src]="character.imgSrc" [alt]="character.name">
+    <div class="description">{{character.description}}</div>
+
+    <h4>Comics</h4>
+    <ul *ngIf="character.comics.items.length; else noComics" >
+        <li class="comics" *ngFor="let item of character.comics.items">{{item.name}} </li>
+    </ul>
+    <ng-template #noComics>
+        <p  class="noComics" >No comics</p>
+      </ng-template>
+
+      <h4>Series</h4>
+    <ul *ngIf="character.series.items.length; else noSeries">
+        <li class="series" *ngFor="let item of character.series.items">{{item.name}} </li>
+    </ul>
+    <ng-template #noSeries>
+        <p class="noSeries">No series</p>
+      </ng-template>
+
+      <h4>Stories</h4>
+    <ul *ngIf="character.stories.items.length; else noStories">
+        <li class="stories" *ngFor="let item of character.stories.items">{{item.name}} </li>
+    </ul>
+    <ng-template #noStories>
+        <p class="noStories">No stories</p>
+      </ng-template>
+
+      <h4>Events</h4>
+    <ul *ngIf="character.events.items.length; else noEvents">
+        <li class="events" *ngFor="let item of character.events.items">{{item.name}} </li>
+    </ul>
+    <ng-template #noEvents>
+        <p class="noEvents">No events</p>
+      </ng-template>
+      
+    <button mat-raised-button><a class="characterLink" href="'/character-list'"> Back to character list</a> </button>
+</div>
+
