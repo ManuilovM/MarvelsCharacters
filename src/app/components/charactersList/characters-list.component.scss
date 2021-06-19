@@ -1,0 +1,19 @@
+@media  (min-width: 1000px) { 
+    .characters-list-container{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.avatar{
+    background-size: cover;
+}
+
+.card{
+    margin-bottom: 5px;
+}
+
+.characterLink{
+    text-decoration: none;
+    color: inherit;
+}
