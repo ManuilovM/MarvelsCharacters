@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MarvelsCharacters"
+    }
+  },
+  "defaultProject": "MarvelsCharacters",
+  "cli": {
+    "analytics": "43a2de70-c43d-4597-82e8-18e38c008896"
+  }
 }
