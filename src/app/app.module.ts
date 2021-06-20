@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    StoreModule.forRoot({characterList: CharacterRedusers.reduser}),
+    StoreModule.forRoot({charactersList: CharacterRedusers.reduser}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
