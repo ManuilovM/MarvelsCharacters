@@ -1,7 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import * as CharactersActions from './characters-list.actions';
+import { MarvelCharacter } from 'src/app/classes/marvel-character';
+import * as CharactersActions from '../actions/characters-list.actions';
 
-const Icharacterslist: Array<any>= [
+const Icharacterslist: Array<MarvelCharacter>= [
   {
     "id": 1011031,
     "name": "Agent X (Nijo)",
@@ -658,7 +659,7 @@ const Icharacterslist: Array<any>= [
 
 
 
-export const initialState: Array<any> =Icharacterslist
+export const initialState: Array<MarvelCharacter> =Icharacterslist
 
 
 const charsctersReducer = createReducer(
@@ -666,6 +667,6 @@ const charsctersReducer = createReducer(
   on(CharactersActions.addCharacter, (state, {characters})=>( state.concat(characters) )
     )
 )
-export function reduser(state: Array<any> | undefined, action: Action){
+export function reduser(state: Array<MarvelCharacter> | undefined, action: Action){
   return charsctersReducer(state, action);
 }

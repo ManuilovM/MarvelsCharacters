@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { MarvelCharacter } from 'src/app/classes/marvel-character';
 
 @Component({
   selector: 'app-characters-list',
@@ -7,9 +9,9 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./characters-list.component.scss']
 })
 export class CharactersListComponent implements OnInit {
-  charactersList$ = this.store.select('characterList') ;
+  charactersList$: Observable<MarvelCharacter[]>= this.store.select('characterList') ;
 
-  constructor(private store: Store<{characterList:Array<any>}>) { }
+  constructor(private store: Store<{characterList:Array<MarvelCharacter>}>) { }
 
   ngOnInit(): void {
   }

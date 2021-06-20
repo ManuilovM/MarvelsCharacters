@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { StoreModule } from '@ngrx/store';
-import * as CharacterRedusers from './ngrx/characterslist/characters-list.reduser';
+import * as CharacterRedusers from './ngrx/redusers/characters-list.reduser';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
