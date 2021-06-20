@@ -2,17 +2,17 @@ import { Action, createReducer, on } from '@ngrx/store';
 import { MarvelCharacter } from 'src/app/intefaces/marvel-character';
 import * as CharactersActions from '../actions/characters-list.actions';
 
-const Icharacterslist: Array<MarvelCharacter>= []
 
 
-
-export const initialState: Array<MarvelCharacter> =Icharacterslist
+export const initialState: Array<MarvelCharacter> =[]
 
 
 const charsctersReducer = createReducer(
   initialState, 
-  on(CharactersActions.addCharacter, (state, {characters})=>( state.concat(characters) )
-    )
+  on(
+    CharactersActions.CharactersListLoadedSuccess, (state, {payload})=>(state.concat(payload))
+  ),
+  on(CharactersActions.CharactersListLoadedError,(state)=>(state))
 )
 
 export function reduser(state: Array<MarvelCharacter> | undefined, action: Action){
