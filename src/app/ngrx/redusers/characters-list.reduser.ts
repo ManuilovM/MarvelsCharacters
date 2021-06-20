@@ -6,12 +6,9 @@ import * as CharactersActions from '../actions/characters-list.actions';
 
 export const initialState: Array<MarvelCharacter> =[]
 
-
 const charsctersReducer = createReducer(
   initialState, 
-  on(
-    CharactersActions.CharactersListLoadedSuccess, (state, {payload})=>(state.concat(payload))
-  ),
+  on(CharactersActions.CharactersListLoadedSuccess, (state, {payload})=>(state.concat(payload))),
   on(CharactersActions.CharactersListLoadedError,(state)=>(state))
 )
 
