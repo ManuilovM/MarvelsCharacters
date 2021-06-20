@@ -1,5 +1,5 @@
 <div class="character-card-container">
-    <mat-card *ngFor="let item of charactersList" class="card">
+    <mat-card *ngFor="let item of charactersList$ |async" class="card">
         <mat-card-header>
           <div mat-card-avatar class="avatar" [style.background-image] = "'url('+ item.avatarSrc+')'"></div>
           <mat-card-title>{{item.name}}</mat-card-title>
