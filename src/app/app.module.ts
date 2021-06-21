@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { StoreModule } from '@ngrx/store';
-import * as CharacterRedusers from './ngrx/redusers/characters-list.reduser';
+import * as CharactersRedusers from './ngrx/redusers/characters-list.reduser';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
@@ -17,6 +17,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersListEffects } from './ngrx/effects/characters-list.effects';
 
+import * as OneCharacterRedusers from "./ngrx/redusers/character.reduser"
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { CharactersListEffects } from './ngrx/effects/characters-list.effects';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    StoreModule.forRoot({charactersList: CharacterRedusers.reduser}),
+    StoreModule.forRoot({charactersList: CharactersRedusers.reduser, character: OneCharacterRedusers.reduser}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([CharactersListEffects]),
     StoreRouterConnectingModule.forRoot(),

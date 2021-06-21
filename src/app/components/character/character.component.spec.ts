@@ -251,12 +251,12 @@ describe('CharacterComponent', () => {
 
   xdescribe("properties",()=>{
     beforeEach(()=>{
-      component.character =character;
+     // component.character$ =character;
       fixture.detectChanges();
     })
 
     it("should be character",()=>{
-      expect(component.character).toBeTruthy();
+      expect(component.character$).toBeTruthy();
     })
 
     it("should render character.name",()=>{
