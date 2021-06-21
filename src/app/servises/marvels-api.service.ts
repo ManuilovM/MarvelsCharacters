@@ -20,9 +20,12 @@ export class MarvelsApiService {
   }
 
 
-
   getCharacterById(id:number){
-
+    let headers = new HttpHeaders();
+    headers.append("contentType", "application/json");
+    
+    const url :string = "https://gateway.marvel.com:443/v1/public/characters/"+id+"?apikey="+this.apiKey;
+    return this.http.get(url, { headers: headers });
   }
 
 }

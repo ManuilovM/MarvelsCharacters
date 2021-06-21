@@ -27,4 +27,14 @@ describe('MarvelsApiService', () => {
       expect(true).toBeTruthy();
     })
   })
+
+  describe("getCharacterById",()=>{
+    it("test real reqest",()=>{
+      service.getCharacterById(1017100).subscribe((data:any)=>{
+        let primaryArray: Array<MarvelCharacterFromApi> =data.data.results;
+        console.log(primaryArray[0]);
+      })
+      expect(true).toBeTruthy();
+    })
+  })
 });
