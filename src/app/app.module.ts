@@ -15,6 +15,8 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { HttpClientModule } from '@angular/common/http';
+import { CharactersListEffects } from './ngrx/effects/characters-list.effects';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     StoreModule.forRoot({charactersList: CharacterRedusers.reduser}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([CharactersListEffects]),
     StoreRouterConnectingModule.forRoot(),
     HttpClientModule
   ],

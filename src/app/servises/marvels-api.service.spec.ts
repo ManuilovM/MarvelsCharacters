@@ -20,7 +20,7 @@ describe('MarvelsApiService', () => {
 
   describe("getMarvelCharacters",()=>{
     it("test real reqest",()=>{
-      service.getMarvelCharacters(0,1).subscribe((data:any)=>{
+      service.getMarvelCharacters(3,3).subscribe((data:any)=>{
         let primaryArray: Array<MarvelCharacterFromApi> =data.data.results;
         console.log(primaryArray[0]);
       })
