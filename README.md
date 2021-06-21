@@ -1,3 +1,14 @@
+# beforeAll
+1) register https://developer.marvel.com/. and get apiKey
+
+2) create file src/app/servises/apikey.ts
+
+3) add to file:
+export const ApiKey:string = 'your apiKey'; 
+
+4) save apikey.ts
+
+
 # MarvelsCharacters
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
