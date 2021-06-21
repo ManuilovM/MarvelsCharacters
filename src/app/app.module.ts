@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CharactersListEffects } from './ngrx/effects/characters-list.effects';
 
 import * as OneCharacterRedusers from "./ngrx/redusers/character.reduser"
+import { CharacterEffects } from './ngrx/effects/character.effects';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import * as OneCharacterRedusers from "./ngrx/redusers/character.reduser"
     MatButtonModule,
     StoreModule.forRoot({charactersList: CharactersRedusers.reduser, character: OneCharacterRedusers.reduser}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([CharactersListEffects]),
+    EffectsModule.forRoot([CharactersListEffects, CharacterEffects]),
     StoreRouterConnectingModule.forRoot(),
     HttpClientModule
   ],
